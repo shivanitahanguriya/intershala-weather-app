@@ -2,6 +2,7 @@ let searchInput = document.getElementById("search-input");
 let searchBtn = document.getElementById("search-btn");
 let locationSearch = document.getElementById("location-search");
 let weatherData;
+let result = document.getElementById("result");
 
 searchBtn.addEventListener("click", () => {
     if(searchInput.value !="")
@@ -19,6 +20,7 @@ function fetchData(location) {
       .then((data) => {
         weatherData = data;
         console.log(weatherData);
+        renderCard()
         return 1;
       })
       .catch((e) => {
@@ -26,3 +28,17 @@ function fetchData(location) {
         return 0;
       });
   }
+// Event listener for location search button click
+locationSearch.addEventListener("click",()=>{
+  console.log("working");
+  
+})
+
+function renderCard()
+{
+ result.innerHTML=`<div class="w-full">
+        <div class="w-full mx-auto p-5 bg-green-700 flex justify-between gap-1 rounded-xl" id="today-Card">
+            
+        </div>
+ks      </div>` 
+}
