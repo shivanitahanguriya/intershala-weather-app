@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather-Forcast</title>
+    <link href="output.css" rel="stylesheet" />
+</head>
+
+<body class="bg-cover bg-no-repeat bg-center bg-fixed">
+    <section
+    class="w-full  text-4xl flex justify-center items-center py-5 text-black">
+    <h1 class="text-center">Weather Forcast</h1>
+  </section>
+  <!-- search bar -->
+  <section
+    class="w-[96%] flex flex-col lg:flex-row space-x-10 overflow-hidden mt-10 mx-auto box-border">
+    <div class="w-full lg:w-2/6 p-2">
+      <p class="text-xl font-bold">Enter the city name:</p>
+      <div
+        class="w-full py-1 px-2 my-1 mx-auto border-2 border-black rounded-sm">
+        <input class="w-full text-lg" id="search-input" type="text" placeholder="ex- delhi" />
+      </div>
+      <button
+      id="search-btn"
+        class="w-full cursor-pointer  text-black py-2 px-4 text-center mt-3 my-2 text-lg font-semibold rounded-md">
+        Search
+      </button>
+      <p class="text-center text-lg">or</p>
+
+      <!-- Location Button -->
+      <button id="location-search" class="w-full cursor-pointer bg-gray-500 text-white py-2 px-4 text-center my-2 text-lg font-semibold rounded-md">Use current location</button>
+      <div>
+        <p class="text-lg font-bold mt-5">Search History:</p>
+        <ol id="search-history">
+        </ol>
+      </div>
+    </div>
+    <div class="w-full lg:w-4/6" id="result">
+    </div>
+  </section>
+</body>
+
+</html>
